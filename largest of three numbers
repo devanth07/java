@@ -1,0 +1,18 @@
+let a = parseInt(prompt("Enter first number:"), 10);
+let b = parseInt(prompt("Enter second number:"), 10);
+let c = parseInt(prompt("Enter third number:"), 10);
+
+let largest = a;
+if (b > largest) {
+  largest = b;
+}
+if (c > largest) {
+  largest = c;
+}
+console.log("Largest = " + largest);
+
+output:8
+7
+9
+
+Largest=9
