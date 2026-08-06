@@ -1,21 +1,17 @@
 let message = prompt("Enter a message:");
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let result = "";
-
+message = message.toLowerCase();
 for (let ch of message) {
-  if (ch >= 'a' && ch <= 'z') {
-    result += String.fromCharCode(
-      ((ch.charCodeAt(0) - 97 + 3) % 26) + 97
-    );
-  } else if (ch >= 'A' && ch <= 'Z') {
-    result += String.fromCharCode(
-      ((ch.charCodeAt(0) - 65 + 3) % 26) + 65
-    );
-  } else {
-    result += ch;
-  }
+    let index = alphabet.indexOf(ch);
+    if (index !== -1) {
+        let newIndex = (index + 3) % 26;
+        result += alphabet[newIndex];
+    } else {
+        result += ch; 
+    }
 }
-
-console.log("Encrypted message = " + result);
+console.log("Encrypted Message: " + result);
 
 
 output:
