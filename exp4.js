@@ -111,44 +111,35 @@ public class Main {
 QUESTION-4
 
 import java.util.Scanner;
-
 class Product {
     private int productId;
     private String productName;
     private double price;
-
     public Product(int productId, String productName, double price) {
         this.productId = productId;
         this.productName = productName;
         this.price = price;
         System.out.println("Product Record Created");
     }
-
     public int getProductId() {
         return productId;
     }
-
     public void setProductId(int productId) {
         this.productId = productId;
     }
-
     public String getProductName() {
         return productName;
     }
-
     public void setProductName(String productName) {
         this.productName = productName;
     }
-
     public double getPrice() {
         return price;
     }
-
     public void setPrice(double price) {
         this.price = price;
         System.out.println("Product Record Updated");
     }
-
     public void displayDetails() {
         System.out.println("Product ID: " + productId);
         System.out.println("Product Name: " + productName);
@@ -156,92 +147,23 @@ class Product {
         System.out.println("Product Details Displayed");
     }
 }
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
         System.out.print("Enter Product ID: ");
         int id = sc.nextInt();
         sc.nextLine();
-        
         System.out.print("Enter Product Name: ");
         String name = sc.nextLine();
-        
         System.out.print("Enter Product Price: ");
         double price = sc.nextDouble();
-
         Product prod = new Product(id, name, price);
-
         System.out.print("Enter New Price to Update: ");
         double updatedPrice = sc.nextDouble();
         prod.setPrice(updatedPrice);
-
-        prod.displayDetails();
-        
+        prod.displayDetails(); 
         sc.close();
     }
 }
 
-
-
-
-
-QUESTION-5
-
-import java.util.Scanner;
-class Product {
-    private int productId;
-    private String productName;
-    private double price;
-    public Product(int productId, String productName, double price) {
-        this.productId = productId;
-        this.productName = productName;
-        this.price = price;
-        System.out.println("Product Record Created");
-    }
-    public int getProductId() {
-        return productId;
-    }
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-    public String getProductName() {
-        return productName;
-    }
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-    public double getPrice() {
-        return price;
-    }
-    public void setPrice(double price) {
-        this.price = price;
-        System.out.println("Product Record Updated");
-    }
-    public void displayDetails() {
-        System.out.println("Product ID: " + productId);
-        System.out.println("Product Name: " + productName);
-        System.out.println("Price: " + price);
-        System.out.println("Product Details Displayed");
-    }
-}
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Product ID: ");
-        int id = sc.nextInt();
-        sc.nextLine();
-        System.out.print("Enter Product Name: ");
-        String name = sc.nextLine();
-        System.out.print("Enter Product Price: ");
-        double price = sc.nextDouble();
-        Product prod = new Product(id, name, price);
-        System.out.print("Enter new price to update: ");
-        double updatedPrice = sc.nextDouble();
-        prod.setPrice(updatedPrice);
-        prod.displayDetails();
-        sc.close();
-    }
-}
 
